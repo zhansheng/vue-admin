@@ -1,8 +1,8 @@
 {
-  "name": "my",
+  "name": "vue-admin",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "chenyichao <chenyichao@mana.com>",
+  "author": "chenyichao <3042415468@qq.com>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
