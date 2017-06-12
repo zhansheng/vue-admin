@@ -1,5 +1,5 @@
 <template>
-  <li class="nav-item">
+  <li class="nav-item" :class="active">
     <router-link :to="href" class="nav-link">
       <span class="title">{{title}}</span>
     </router-link>
@@ -9,7 +9,8 @@
 <script>
   export default {
     name: 'SubMenu',
-    props: ['title','href']
+    props: ['title','href','active'],
+
   }
 </script>
 

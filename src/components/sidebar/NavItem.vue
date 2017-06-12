@@ -1,6 +1,6 @@
 <template>
-  <li class="nav-item" :class="{ active: isActive, open: isOpen }" @click="toggle">
-    <a class="nav-link nav-toggle">
+  <li class="nav-item" :class="{ active: isActive, open: isOpen }">
+    <a class="nav-link nav-toggle" @click="toggle">
       <i :class="icon"></i>
       <span class="title">{{title}}</span>
       <span class="selected"></span>
