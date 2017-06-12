@@ -1,16 +1,17 @@
 <template>
-  <div class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+  <div class="page-header-fixed page-sidebar-closed-hide-logo page-content-white"
+       :class="{'page-sidebar-closed':sidebarClosed}">
     <div class="page-wrapper">
       <div class="page-header navbar navbar-fixed-top">
         <div class="page-header-inner ">
           <div class="page-logo">
             <a href="index.html">
               <img src="../assets/img/logo.png" alt="logo" class="logo-default"/> </a>
-            <div class="menu-toggler sidebar-toggler">
+            <div class="menu-toggler sidebar-toggler" @click="toggle">
               <span></span>
             </div>
           </div>
-          <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+          <a class="menu-toggler responsive-toggler" data-toggle="collapse"
              data-target=".navbar-collapse">
             <span></span>
           </a>
@@ -19,7 +20,7 @@
       </div>
       <div class="clearfix"></div>
       <div class="page-container">
-        <sidebar></sidebar>
+        <sidebar :closed="sidebarClosed"></sidebar>
         <div class="page-content-wrapper">
           <router-view></router-view>
         </div>
@@ -614,7 +615,17 @@
 
   export default {
     name: 'Home',
-    components: {sidebar, topmenu}
+    components: {sidebar, topmenu},
+    data: function () {
+      return {
+        sidebarClosed: false
+      }
+    },
+    methods: {
+      toggle() {
+        this.sidebarClosed = !this.sidebarClosed
+      }
+    }
   }
 
 </script>

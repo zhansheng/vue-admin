@@ -116,7 +116,7 @@
         <ul class="dropdown-menu">
           <li class="external">
             <h3>You have
-                                            <span class="bold">7 New</span> Messages</h3>
+              <span class="bold">7 New</span> Messages</h3>
             <a href="app_inbox.html">view all</a>
           </li>
           <li>
@@ -199,7 +199,7 @@
         <ul class="dropdown-menu extended tasks">
           <li class="external">
             <h3>You have
-                                            <span class="bold">12 pending</span> tasks</h3>
+              <span class="bold">12 pending</span> tasks</h3>
             <a href="app_todo.html">view all</a>
           </li>
           <li>
@@ -334,13 +334,13 @@
           <li>
             <a href="app_inbox.html">
               <i class="icon-envelope-open"></i> My Inbox
-                                            <span class="badge badge-danger"> 3 </span>
+              <span class="badge badge-danger"> 3 </span>
             </a>
           </li>
           <li>
             <a href="app_todo.html">
               <i class="icon-rocket"></i> My Tasks
-                                            <span class="badge badge-success"> 7 </span>
+              <span class="badge badge-success"> 7 </span>
             </a>
           </li>
           <li class="divider"></li>
