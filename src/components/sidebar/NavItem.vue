@@ -1,12 +1,12 @@
 <template>
-  <li class="nav-item active open" :class="active">
+  <li class="nav-item" :class="{ active: isActive, open: isOpen }" @click="toggle">
     <a class="nav-link nav-toggle">
       <i :class="icon"></i>
       <span class="title">{{title}}</span>
       <span class="selected"></span>
-      <span class="arrow open"></span>
+      <span class="arrow" :class="isOpen ? 'open' : ''"></span>
     </a>
-    <ul class="sub-menu">
+    <ul class="sub-menu" :class="isOpen ? 'show' : 'hide'">
       <slot></slot>
     </ul>
   </li>
@@ -15,7 +15,21 @@
 <script>
   export default {
     name: 'NavItem',
-    props: ['icon', 'title','active']
+    props: ['icon', 'title', 'active', 'navIndex'],
+    data: function () {
+      return {
+        isActive: this.active,
+        isOpen: false,
+      }
+    },
+    methods: {
+      toggle: function () {
+        this.isOpen = !this.isOpen
+        if (this.isOpen) {
+          this.$emit('itemOpen', this.navIndex)
+        }
+      }
+    },
   }
 </script>
 

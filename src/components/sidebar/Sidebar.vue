@@ -33,7 +33,11 @@
                  :key="cate.category"
                  :title="cate.title"
                  :icon="cate.icon"
-                 :active="$route.path.indexOf(cate.category) > -1 ? 'active open' : ''">
+                 :active=false
+                 :navIndex=i
+                 @itemOpen=handleOpen
+        >
+          <!--:active="$route.path.indexOf(cate.category) > -1 ? 'active open' : ''">-->
 
           <subMenu v-for="(item,j) in cate.children"
                    :key="item.router"
@@ -126,6 +130,12 @@
         ]
       }
     },
+    methods: {
+      handleOpen(index) {
+        console.log(index + ' is opend')
+      }
+    }
+
   }
 
 </script>
